@@ -1,4 +1,24 @@
-main {
-  color: var(--main-gold);
-  font-family: 'Rozanova';
+.Navbar {
+  background-color: black;
+}
+
+.Navbar .additional-info {
+  display: flex;
+  justify-content: end;
+}
+
+.Navbar .logo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.Navbar .logo > img {
+  width: 188px;
+}
+
+.Navbar .main-nav {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
 }
