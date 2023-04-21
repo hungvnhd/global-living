@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="Navbar">
+    <nav className="Navbar fixed-top">
       <div className="nav-row additional-info">
         <div className="phone">0931 626 909</div>
         <div className="icon">fb</div>
