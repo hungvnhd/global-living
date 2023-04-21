@@ -25,6 +25,7 @@ export default function HomePage() {
           </article>
         </div>
       </header>
+      <section className="About-section">About section</section>
       <Footer></Footer>
     </>
   );
