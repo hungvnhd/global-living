@@ -1,8 +1,15 @@
 import { Navbar } from "@/components/common";
+import { useState } from "react";
 
 export default function documents() {
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleSelectChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
   return (
     <div>
+      <Navbar />
       <div className='documents-container'>
         <div>
           <span style={{ color: "#FFCD29" }}>Tài liệu đã lưu về</span>
@@ -23,15 +30,18 @@ export default function documents() {
           />
         </div>
         <div className='documents-projects'>
-          <select name='' id=''>
+          <select name='menu' id='menu' onChange={handleSelectChange}>
             <option value='giohang'>Giỏ hàng</option>
-            <option value='giohang'>Tài liệu bán hàng</option>
-            <option value='giohang'>Thông tin chương trình</option>
-            <option value='giohang'>Tư liệu truyền thông</option>
-            <option value='giohang'>Bộ nhận diện</option>
+            <option value='tailieubanhang'>Tài liệu bán hàng</option>
+            <option value='thongtinchuongtrinh'>Thông tin chương trình</option>
+            <option value='tulieutruyenthong'>Tư liệu truyền thông</option>
+            <option value='bonhandien'>Bộ nhận diện</option>
           </select>
         </div>
-        <div className='documents-giohang'>
+        <div
+          className='documents-giohang'
+          style={{ display: selectedOption === "giohang" ? "block" : "none" }}
+        >
           <div style={{ color: "#FFCD29" }}>Giỏ Hàng</div>
           <div style={{ display: "flex", gap: "20px" }}>
             <img
@@ -97,7 +107,12 @@ export default function documents() {
             </div>
           </div>
         </div>
-        <div className='documents-tailieu'>
+        <div
+          className='documents-tailieu'
+          style={{
+            display: selectedOption === "tailieubanhang" ? "block" : "none",
+          }}
+        >
           <p style={{ color: "#FFCD29" }}>Tài liệu bán hàng</p>
           <div className='documents-tailieu__flyer'>
             <img
@@ -125,7 +140,13 @@ export default function documents() {
             </div>
           </div>
         </div>
-        <div className='documents-thongtinchuongtrinh'>
+        <div
+          className='documents-thongtinchuongtrinh'
+          style={{
+            display:
+              selectedOption === "thongtinchuongtrinh" ? "block" : "none",
+          }}
+        >
           <p style={{ color: "#FFCD29" }}>Thông tin chương trình</p>
           <div className='document-thongtinchuongtrinh__buttons'>
             <img
@@ -142,7 +163,12 @@ export default function documents() {
             />
           </div>
         </div>
-        <div className='documents-tulieutruyenthong'>
+        <div
+          className='documents-tulieutruyenthong'
+          style={{
+            display: selectedOption === "tulieutruyenthong" ? "block" : "none",
+          }}
+        >
           <p style={{ color: "#FFCD29" }}>Tư liệu truyền thông</p>
           <div className='documents-tulieutruyenthong__buttons'>
             <div style={{ display: "flex", gap: "20px" }}>
@@ -183,6 +209,48 @@ export default function documents() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div
+          className='documents-bonhandien'
+          style={{
+            display: selectedOption === "bonhandien" ? "block" : "none",
+          }}
+        >
+          <p style={{ color: "#FFCD29" }}>Bộ nhận diện</p>
+          <div className='documents-tulieutruyenthong__buttons'>
+            <div style={{ display: "flex", gap: "20px" }}>
+              <img
+                src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+                data-bs-toggle='modal'
+                data-bs-target='#modal4'
+                alt=''
+              />
+              <img
+                src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+                data-bs-toggle='modal'
+                data-bs-target='#modal4'
+                alt=''
+              />
+            </div>
+
+            {/* <div
+              class="modal fade"
+              id="modal4"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-custom">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div className="document-tulieu__template">
+                      <img src="/img/template2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
