@@ -9,6 +9,7 @@
   --main-brown: #bb9352;
   --main-yellow: #efcd7f;
 
+<<<<<<< HEAD
   --primary-background: linear-gradient(
     54deg,
     #e0a23b 0%,
@@ -24,6 +25,12 @@
     #f4df9b 66.82%,
     #fec450 96.93%
   );
+=======
+  --primary-background: linear-gradient(54deg, #E0A23B 0%, #F4ED93 18.23%, #FCB045 51.16%, #F4ED93 82.29%, #E0A23B 99.99%, #F4ED93 100%);
+  --secondary-background: linear-gradient(102.66deg, #FFDB63 31.25%, #F4DF9B 66.82%, #FEC450 96.93%);
+  --bs-btn-bg: none !important;
+--bs-btn-border-color: none !important;
+>>>>>>> feature/signup
 }
 
 @font-face {
@@ -60,7 +67,9 @@ ul {
   align-items: center;
   justify-content: center;
 }
-
+.btn-primary{
+  background-color: none !important;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -165,10 +174,13 @@ ul {
 .document-salekits{
   display: flex;
   gap:20px;
+
+  
 }
 .document-salekits img{
   width: 20%;
 }
+
 .documents-projects select{
 appearance: none;
 }
@@ -218,3 +230,177 @@ width: 20%;
   .documents-thongtinchuongtrinh img{
     width: 20%;
   }
+  .documents-tulieutruyenthong__buttons img{
+    width: 20%;
+
+  }
+  .document-tulieu__template img{
+    width: 100%;
+  }
+
+
+
+
+  /* login */
+  .modalLogin {
+    background: url("/Rectangle129.png");
+    position: relative;
+    width: 1920px;
+    height: 1334px;
+  }
+  .logoLogin {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    left: 830px;
+    top: -29px;
+  }
+  .textTitle,
+  .checkAcc {
+    position: absolute;
+    width: 1050px;
+    height: 156px;
+    left: 465px;
+    top: 263px;
+    font-family: "IM FELL Double Pica SC";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: -0.019em;
+    color: #efcd7f;
+  }
+  .checkAcc {
+    color: red;
+    top: 130px;
+    left: -100px;
+    font-size: 35px;
+  }
+  .formLogin {
+    position: relative;
+    position: absolute;
+    width: 809px;
+    height: 617px;
+    left: 586px;
+    top: 484px;
+    background: #d9d9d9;
+  }
+  .divLogin {
+    position: absolute;
+    width: 809px;
+    height: 111px;
+    /* left: 586px;
+  top: 484px; */
+    background: linear-gradient(
+      102.66deg,
+      #ffdb63 31.25%,
+      #f4df9b 66.82%,
+      #fec450 96.93%
+    );
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .textLogin {
+    position: absolute;
+    width: 301px;
+    height: 48px;
+    left: 254px;
+    top: 36px;
+    font-family: "Inika";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.019em;
+    color: #000000;
+  }
+  .iconEmail,
+  .iconBlock {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 198px;
+    left: 72px;
+  }
+  .iconBlock {
+    top: 318px;
+  }
+  .inputLoginEmail,
+  .inputLoginPassword {
+    position: absolute;
+    left: 170px;
+    top: 205px;
+    color: rgba(0, 0, 0, 0.33);
+    width: 83px;
+    height: 60px;
+    width: 600px;
+    font-family: "Inika";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -0.019em;
+    border: none;
+    background-color: #d9d9d9;
+    padding: 20px;
+  }
+  .inputLoginPassword {
+    top: 320px;
+  }
+  .btnLogin {
+    position: absolute;
+    width: 874px;
+    height: 111px;
+    left: -29px;
+    top: 450px;
+    background: linear-gradient(
+      102.66deg,
+      #ffdf75 31.25%,
+      #ffeaa6 66.82%,
+      #ffc249 96.93%
+    );
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    font-family: "Inika";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+    letter-spacing: -0.019em;
+    color: #000000;
+    border: none;
+  }
+ 
+  .btnGoRegister {
+    font-family: "Inika";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: -0.019em;
+    color: #ffffff;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 1143px;
+    left: 650px;
+  }
+
+  .btnBackIndex{
+    font-family: "Inika";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: -0.019em;
+    color: #ffffff;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 1143px;
+    left: 1100px;
+  }
+>>>>>>> feature/signup
