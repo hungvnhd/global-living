@@ -5,8 +5,13 @@ export default function documents() {
     <div>
       <div className="documents-container">
         <div>
+<<<<<<< HEAD
           <span style={{ color: "#FFCD29" }}>Tai lieu da luu ve</span>
           <button>Hungary</button>
+=======
+          <span style={{ color: "#FFCD29" }}>Tài liệu đã lưu về</span>
+          <button style={{ backgroundColor: "#FFCD29" }}>Hungary</button>
+>>>>>>> feature/signup
         </div>
         <div className="document-salekits">
           <img
@@ -33,6 +38,7 @@ export default function documents() {
         </div>
         <div className="documents-giohang">
           <div style={{ color: "#FFCD29" }}>Giỏ Hàng</div>
+<<<<<<< HEAD
           <img
             src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
             class="btn btn-primary"
@@ -40,6 +46,28 @@ export default function documents() {
             data-bs-target="#exampleModal"
             alt=""
           />
+=======
+          <div style={{ display: "flex", gap: "20px" }}>
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              alt=""
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              alt=""
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              alt=""
+            />
+          </div>
+>>>>>>> feature/signup
 
           <div
             class="modal fade"
@@ -85,11 +113,18 @@ export default function documents() {
           </div>
         </div>
         <div className="documents-tailieu">
+<<<<<<< HEAD
           <p style={{ color: "#FFCD29" }}>Tai lieu ban hang</p>
           <div className="documents-tailieu__flyer">
             <img
               src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
               class="btn btn-primary"
+=======
+          <p style={{ color: "#FFCD29" }}>Tài liệu bán hàng</p>
+          <div className="documents-tailieu__flyer">
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
+>>>>>>> feature/signup
               data-bs-toggle="modal"
               data-bs-target="#modal2"
               alt=""
@@ -129,6 +164,52 @@ export default function documents() {
               alt=""
             />
           </div>
+<<<<<<< HEAD
+=======
+        </div>
+        <div className="documents-tulieutruyenthong">
+          <p style={{ color: "#FFCD29" }}>Tư liệu truyền thông</p>
+          <div className="documents-tulieutruyenthong__buttons">
+            <div style={{ display: "flex", gap: "20px" }}>
+              <img
+                src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
+                data-bs-toggle="modal"
+                data-bs-target="#modal3"
+                alt=""
+              />
+              <img
+                src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
+                data-bs-toggle="modal"
+                data-bs-target="#modal3"
+                alt=""
+              />
+              <img
+                src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
+                data-bs-toggle="modal"
+                data-bs-target="#modal3"
+                alt=""
+              />
+            </div>
+
+            <div
+              class="modal fade"
+              id="modal3"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-custom">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div className="document-tulieu__template">
+                      <img src="/img/template2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+>>>>>>> feature/signup
         </div>
       </div>
     </div>

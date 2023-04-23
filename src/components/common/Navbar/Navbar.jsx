@@ -63,7 +63,7 @@ export default function Navbar() {
           <Link href='/'>Sản phẩm đầu tư</Link>
           <Link href='/tin-tuc'>Tin tức</Link>
           <Link href='/'>Tài liệu bán hàng</Link>
-          <Link href='/'>Đăng nhập Đại lý/ CTV</Link>
+          <Link href='/login'>Đăng nhập Đại lý/ CTV</Link>
         </div>
       </div>
     </nav>
