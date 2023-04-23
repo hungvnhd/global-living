@@ -112,7 +112,15 @@ export default function Reister() {
         </div>
       </div>
       <div className="sign-up__title">
-        <p>Đăng ký CTV/Sale</p>
+        <p
+          style={{
+            color: "rgba(239, 205, 127, 1)",
+            cursor: "pointer",
+            fontSize: "120%",
+          }}
+        >
+          Đăng ký CTV/Sale
+        </p>
       </div>
       <div className="sign-up__form-container">
         <form

@@ -117,7 +117,9 @@ const BusinessPartners = () => {
 					nhận những thông tin, tài liệu đắt giá nhất về thị trường
 					đầu tư bất động sản quốc tế.
 				</p>
-				<button>Đăng ký ngay</button>
+				<button onClick={()=>{
+					window.location.href="/register"
+				}}>Đăng ký ngay</button>
 			</div>
 		</section>
 	);

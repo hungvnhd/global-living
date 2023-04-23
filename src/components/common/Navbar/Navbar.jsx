@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className='Navbar fixed-top'
+      className="Navbar fixed-top"
       style={
         navBar
           ? {
@@ -36,14 +36,14 @@ export default function Navbar() {
             }
       }
     >
-      <div className='nav-row additional-info'>
-        <div className='phone'>0931 626 909</div>
-        <div className='icon'>Facebook</div>
-        <div className='icon'>Zalo</div>
-        <div className='icon'>Youtube</div>
+      <div className="nav-row additional-info">
+        <div className="phone">0931 626 909</div>
+        <div className="icon">Facebook</div>
+        <div className="icon">Zalo</div>
+        <div className="icon">Youtube</div>
       </div>
       <div
-        className='Navbar-container'
+        className="Navbar-container"
         style={{
           display: navBar ? "flex" : "block",
           alignItems: "center",
@@ -51,19 +51,19 @@ export default function Navbar() {
         }}
       >
         <div
-          className='nav-row logo'
+          className="nav-row logo"
           style={{
             marginBottom: !navBar ? "30px" : 0,
           }}
         >
-          <img src='/logo.png' alt='global-living' />
+          <img src="/logo.png" alt="global-living" />
         </div>
-        <div className='nav-row main-nav'>
-          <Link href='/'>Về Global Living</Link>
-          <Link href='/'>Sản phẩm đầu tư</Link>
-          <Link href='/'>Tin tức</Link>
-          <Link href='/'>Tài liệu bán hàng</Link>
-          <Link href='/'>Đăng nhập Đại lý/ CTV</Link>
+        <div className="nav-row main-nav">
+          <Link href="/">Về Global Living</Link>
+          <Link href="/">Sản phẩm đầu tư</Link>
+          <Link href="/">Tin tức</Link>
+          <Link href="/">Tài liệu bán hàng</Link>
+          <Link href="/login">Đăng nhập Đại lý/ CTV</Link>
         </div>
       </div>
     </nav>
