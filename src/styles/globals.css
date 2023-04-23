@@ -50,6 +50,11 @@ a {
   }
 }
 
+.documents-container{
+  background-color: #1E1E1E;
+
+}
+
 .sign-up__header {
   width: 100%;
   font-size: 120%;
@@ -128,6 +133,7 @@ a {
 
 }
 
+
 .form-button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: none;
@@ -137,3 +143,59 @@ a {
   background: linear-gradient(102.66deg, #FFDB63 31.25%, #F4DF9B 66.82%, #FEC450 96.93%);
   ;
 }
+.document-salekits{
+  display: flex;
+  gap:20px;
+}
+.document-salekits img{
+  width: 20%;
+}
+.documents-projects select{
+appearance: none;
+}
+.documents-projects select:focus{
+  appearance: none;
+  outline: none;
+  }
+
+  .documents-giohang img{
+    width: 20%;
+  }
+  .giohang-chitiet{
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+  }
+  .giohang-chitiet img{
+    width:100%;
+   
+  }
+  .giohang-chitiet-left{
+    background-color: #1E1E1E;
+  }
+  .modal-lg{
+    max-width: 80% !important;
+  }
+
+  .giohang-chitiet-right{
+    width: 100%;
+    color: white;
+  }
+  .modal-content{
+    background-color: #1E1E1E !important;
+  }
+
+  .documents-tailieu__flyer img{
+width: 20%;
+  }
+  .document-tailieu__template img{
+    width: 100%;
+
+  }
+  .document-thongtinchuongtrinh__buttons{
+    display: flex;
+    gap:20px;
+  }
+  .documents-thongtinchuongtrinh img{
+    width: 20%;
+  }
