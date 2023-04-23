@@ -32,7 +32,23 @@ export default function Reister() {
     setPhone(e.target.value);
   };
   const handleChangeArea = (e) => {
-    setArea(e.target.value);
+    e.preventDefault();
+
+    if (
+      selected === "AZGLOBAL" ||
+      selected === "EURO HOLDINGS" ||
+      selected === "NHÀ ĐẤT THỦ ĐÔ"
+    ) {
+      setArea("Ha Noi");
+    } else if (selected === "FOUR HOMES") {
+      setArea("QUẢNG NINH, HẢI PHÒNG");
+    } else if (selected === "ĐẤT GỐC" || selected === "NEW CITY") {
+      setArea("NHA TRANG");
+    } else if (selected === "SAIGON CENTER REAL") {
+      setArea("Thành Phố Hồ CHí Minh");
+    } else {
+      setArea(e.target.value);
+    }
   };
   const handleChangePassword = (e) => {
     setPassword(e.target.value);
@@ -40,34 +56,49 @@ export default function Reister() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = {
-      full_name: name,
-      email: email,
-      phone: phone,
-      area: area,
-      password: password,
-      agent_name: selected,
-    };
-    async function postJSON(data) {
-      try {
-        const response = await fetch(
-          "https://global-living-backend.vercel.app/api/v1/customerinfo",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-          }
-        );
+    if (
+      selected === "" ||
+      name === "" ||
+      email === "" ||
+      phone === "" ||
+      area === "" ||
+      password === ""
+    ) {
+      alert("Bạn cần nhập đầy đủ thông tin khi đăng kí");
+    } else {
+      const data = {
+        full_name: name,
+        email: email,
+        phone: phone,
+        area: area,
+        password: password,
+        agent_name: selected,
+      };
 
-        const result = await response.json();
-        console.log("Success:", result);
-      } catch (error) {
-        console.error("Error:", error);
+      async function postJSON(data) {
+        try {
+          const response = await fetch(
+            "https://global-living-backend.vercel.app/api/v1/users",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            }
+          );
+
+          const result = await response.json();
+          alert(result.message);
+          if (result.message === "Đăng ký thành công") {
+            window.location.href = "/homepage";
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
       }
+      postJSON(data);
     }
-    postJSON(data);
   };
   return (
     <div className="sign-up__container">
@@ -100,6 +131,7 @@ export default function Reister() {
               placeholder="Họ và tên"
               className="sign-up__form-container-input"
               onChange={handleChangeName}
+              value={name}
             />
           </p>
           <p>
@@ -107,6 +139,7 @@ export default function Reister() {
               type="email"
               placeholder="Email"
               onChange={handleChangeEmail}
+              value={email}
             />
           </p>
           <p>
@@ -114,15 +147,10 @@ export default function Reister() {
               type="text"
               placeholder="Số điện thoại"
               onChange={handleChangePhone}
+              value={phone}
             />
           </p>
-          <p>
-            <input
-              type="text"
-              placeholder="Khu vực"
-              onChange={handleChangeArea}
-            />
-          </p>
+
           <p>
             <select
               value={selected}
@@ -140,17 +168,39 @@ export default function Reister() {
           </p>
           <p>
             <input
+              type="text"
+              placeholder="Khu vực"
+              onChange={handleChangeArea}
+              value={area}
+            />
+          </p>
+          <p>
+            <input
               type="password"
               placeholder="Mật khẩu"
               onChange={handleChangePassword}
+              value={password}
             />
           </p>
           <button className="form-button">Đăng ký</button>
         </form>
       </div>
       <div className="sign-up__footer">
-        <span>Đã có tài khoản?</span>
-        <button>Đăng nhập ngay</button>
+        <span style={{ color: "white", fontSize: "120%" }}>
+          Đã có tài khoản?
+        </span>
+        <div
+          style={{
+            color: "rgba(239, 205, 127, 1)",
+            cursor: "pointer",
+            fontSize: "120%",
+          }}
+          onClick={() => {
+            window.location.href = "/login";
+          }}
+        >
+          Đăng nhập ngay
+        </div>
       </div>
     </div>
   );

@@ -8,6 +8,39 @@ export default function login() {
   const handleInputPassword = (e) => {
     setInputPassword(e.target.value);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (inputEmail === "" || inputPassword === "") {
+      alert("Bạn cần nhập đầy đủ thông tin khi đăng nhập");
+    } else {
+      const data = {
+        email: inputEmail,
+        password: inputPassword,
+      };
+      async function postJSON(data) {
+        try {
+          const response = await fetch(
+            "https://global-living-backend.vercel.app/api/v1/users/login",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            }
+          );
+
+          const result = await response.json();
+          alert(result.message);
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+      postJSON(data);
+    }
+  };
+
   return (
     <div>
       <div className="modalLogin">
@@ -15,7 +48,7 @@ export default function login() {
         <p className="textTitle">
           BẤT ĐỘNG SẢN ĐỊNH CƯ QUỐC TẾ GIẢI PHÁP ĐẦU TƯ KHÔNG BIÊN GIỚI
         </p>
-        <form className="formLogin">
+        <form className="formLogin" onSubmit={handleSubmit}>
           <div className="divLogin">
             <p className="textLogin">Đăng nhập tài khoản</p>
           </div>
