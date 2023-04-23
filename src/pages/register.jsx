@@ -13,8 +13,61 @@ export default function Reister() {
   ];
   const [data, setData] = useState([]);
   const [selected, setSelected] = useState(options[0].value);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [area, setArea] = useState("");
+  const [password, setPassword] = useState("");
+
   const handleChangeOptions = (e) => {
     setSelected(e.target.value);
+  };
+  const handleChangeName = (e) => {
+    setName(e.target.value);
+  };
+  const handleChangeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleChangePhone = (e) => {
+    setPhone(e.target.value);
+  };
+  const handleChangeArea = (e) => {
+    setArea(e.target.value);
+  };
+  const handleChangePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      full_name: name,
+      email: email,
+      phone: phone,
+      area: area,
+      password: password,
+      agent_name: selected,
+    };
+    async function postJSON(data) {
+      try {
+        const response = await fetch(
+          "https://global-living-backend.vercel.app/api/v1/customerinfo",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          }
+        );
+
+        const result = await response.json();
+        console.log("Success:", result);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    }
+    postJSON(data);
   };
   return (
     <div className="sign-up__container">
@@ -39,22 +92,36 @@ export default function Reister() {
             border: "2px solid rgba(246, 181, 49, 1)",
             padding: "1%",
           }}
+          onSubmit={handleSubmit}
         >
           <p>
             <input
               type="text"
               placeholder="Họ và tên"
               className="sign-up__form-container-input"
+              onChange={handleChangeName}
             />
           </p>
           <p>
-            <input type="email" placeholder="Email" />
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={handleChangeEmail}
+            />
           </p>
           <p>
-            <input type="text" placeholder="Số điện thoại" />
+            <input
+              type="text"
+              placeholder="Số điện thoại"
+              onChange={handleChangePhone}
+            />
           </p>
           <p>
-            <input type="text" placeholder="Khu vực" />
+            <input
+              type="text"
+              placeholder="Khu vực"
+              onChange={handleChangeArea}
+            />
           </p>
           <p>
             <select
@@ -72,7 +139,11 @@ export default function Reister() {
             </select>
           </p>
           <p>
-            <input type="password" placeholder="Mật khẩu" />
+            <input
+              type="password"
+              placeholder="Mật khẩu"
+              onChange={handleChangePassword}
+            />
           </p>
           <button className="form-button">Đăng ký</button>
         </form>
