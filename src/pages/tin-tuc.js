@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Homepage from "../components/pages/Homepage";
-export default function Home() {
+import Newspage from "../components/pages/Newspage";
+export default function tinTuc() {
   return (
     <>
       <Head>
@@ -9,7 +9,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Homepage></Homepage>
+      <Newspage></Newspage>
     </>
   );
 }

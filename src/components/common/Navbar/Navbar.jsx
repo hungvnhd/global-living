@@ -61,7 +61,7 @@ export default function Navbar() {
         <div className='nav-row main-nav'>
           <Link href='/'>Về Global Living</Link>
           <Link href='/'>Sản phẩm đầu tư</Link>
-          <Link href='/'>Tin tức</Link>
+          <Link href='/tin-tuc'>Tin tức</Link>
           <Link href='/'>Tài liệu bán hàng</Link>
           <Link href='/'>Đăng nhập Đại lý/ CTV</Link>
         </div>
