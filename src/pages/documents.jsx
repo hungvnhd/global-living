@@ -3,93 +3,78 @@ import { Navbar } from "@/components/common";
 export default function documents() {
   return (
     <div>
-      <div className="documents-container">
+      <div className='documents-container'>
         <div>
-<<<<<<< HEAD
-          <span style={{ color: "#FFCD29" }}>Tai lieu da luu ve</span>
-          <button>Hungary</button>
-=======
           <span style={{ color: "#FFCD29" }}>Tài liệu đã lưu về</span>
           <button style={{ backgroundColor: "#FFCD29" }}>Hungary</button>
->>>>>>> feature/signup
         </div>
-        <div className="document-salekits">
+        <div className='document-salekits'>
           <img
-            src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-            alt=""
+            src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+            alt=''
           />
           <img
-            src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-            alt=""
+            src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+            alt=''
           />
           <img
-            src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-            alt=""
+            src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+            alt=''
           />
         </div>
-        <div className="documents-projects">
-          <select name="" id="">
-            <option value="giohang">Giỏ hàng</option>
-            <option value="giohang">Tài liệu bán hàng</option>
-            <option value="giohang">Thông tin chương trình</option>
-            <option value="giohang">Tư liệu truyền thông</option>
-            <option value="giohang">Bộ nhận diện</option>
+        <div className='documents-projects'>
+          <select name='' id=''>
+            <option value='giohang'>Giỏ hàng</option>
+            <option value='giohang'>Tài liệu bán hàng</option>
+            <option value='giohang'>Thông tin chương trình</option>
+            <option value='giohang'>Tư liệu truyền thông</option>
+            <option value='giohang'>Bộ nhận diện</option>
           </select>
         </div>
-        <div className="documents-giohang">
+        <div className='documents-giohang'>
           <div style={{ color: "#FFCD29" }}>Giỏ Hàng</div>
-<<<<<<< HEAD
-          <img
-            src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-            alt=""
-          />
-=======
           <div style={{ display: "flex", gap: "20px" }}>
             <img
-              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+              data-bs-toggle='modal'
+              data-bs-target='#exampleModal'
+              alt=''
             />
             <img
-              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+              data-bs-toggle='modal'
+              data-bs-target='#exampleModal'
+              alt=''
             />
             <img
-              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+              data-bs-toggle='modal'
+              data-bs-target='#exampleModal'
+              alt=''
             />
           </div>
->>>>>>> feature/signup
 
           <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
+            class='modal fade'
+            id='exampleModal'
+            tabindex='-1'
+            aria-labelledby='exampleModalLabel'
+            aria-hidden='true'
           >
-            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-custom">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <div className="documents-giohang__chitiet">
+            <div class='modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-custom'>
+              <div class='modal-content'>
+                <div class='modal-body'>
+                  <div className='documents-giohang__chitiet'>
                     <div>
                       <span style={{ color: "#FFCD29" }}> Căn A</span>
                       <button>Nút lưu tài liệu</button>
                     </div>
-                    <div className="giohang-chitiet">
-                      <div className="giohang-chitiet-left">
-                        <img src="/img/template.png" alt="" />
+                    <div className='giohang-chitiet'>
+                      <div className='giohang-chitiet-left'>
+                        <img src='/img/template.png' alt='' />
                       </div>
-                      <div className="giohang-chitiet-right">
-                        <div className="giohang-chitiet-right__general">
+                      <div className='giohang-chitiet-right'>
+                        <div className='giohang-chitiet-right__general'>
                           Thông tin chung: <br />
                           Diện tích: 45m vuông <br />
                           Loại hình: Căn hộ Studio <br />
@@ -97,11 +82,11 @@ export default function documents() {
                           01 phòng bếp đủ tiện nghi <br />
                           01 phòng khách và 01 phòng tắm <br />
                         </div>
-                        <div className="giohang-chitiet-right__tienich">
+                        <div className='giohang-chitiet-right__tienich'>
                           <p>Tiện ích</p>
                           Thang máy, điều hòa, hệ thống sưởi
                         </div>
-                        <div className="giohang-chitiet-right__doanhthu">
+                        <div className='giohang-chitiet-right__doanhthu'>
                           <p>6000 Euro/tháng</p>
                         </div>
                       </div>
@@ -112,35 +97,27 @@ export default function documents() {
             </div>
           </div>
         </div>
-        <div className="documents-tailieu">
-<<<<<<< HEAD
-          <p style={{ color: "#FFCD29" }}>Tai lieu ban hang</p>
-          <div className="documents-tailieu__flyer">
-            <img
-              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-              class="btn btn-primary"
-=======
+        <div className='documents-tailieu'>
           <p style={{ color: "#FFCD29" }}>Tài liệu bán hàng</p>
-          <div className="documents-tailieu__flyer">
+          <div className='documents-tailieu__flyer'>
             <img
-              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
->>>>>>> feature/signup
-              data-bs-toggle="modal"
-              data-bs-target="#modal2"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+              data-bs-toggle='modal'
+              data-bs-target='#modal2'
+              alt=''
             />
             <div
-              class="modal fade"
-              id="modal2"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
+              class='modal fade'
+              id='modal2'
+              tabindex='-1'
+              aria-labelledby='exampleModalLabel'
+              aria-hidden='true'
             >
-              <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-custom">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div className="document-tailieu__template">
-                      <img src="/img/template1.png" alt="" />
+              <div class='modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-custom'>
+                <div class='modal-content'>
+                  <div class='modal-body'>
+                    <div className='document-tailieu__template'>
+                      <img src='/img/template1.png' alt='' />
                     </div>
                   </div>
                 </div>
@@ -148,68 +125,65 @@ export default function documents() {
             </div>
           </div>
         </div>
-        <div className="documents-thongtinchuongtrinh">
+        <div className='documents-thongtinchuongtrinh'>
           <p style={{ color: "#FFCD29" }}>Thông tin chương trình</p>
-          <div className="document-thongtinchuongtrinh__buttons">
+          <div className='document-thongtinchuongtrinh__buttons'>
             <img
-              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+              alt=''
             />
             <img
-              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+              alt=''
             />
             <img
-              src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+              alt=''
             />
           </div>
-<<<<<<< HEAD
-=======
         </div>
-        <div className="documents-tulieutruyenthong">
+        <div className='documents-tulieutruyenthong'>
           <p style={{ color: "#FFCD29" }}>Tư liệu truyền thông</p>
-          <div className="documents-tulieutruyenthong__buttons">
+          <div className='documents-tulieutruyenthong__buttons'>
             <div style={{ display: "flex", gap: "20px" }}>
               <img
-                src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-                data-bs-toggle="modal"
-                data-bs-target="#modal3"
-                alt=""
+                src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+                data-bs-toggle='modal'
+                data-bs-target='#modal3'
+                alt=''
               />
               <img
-                src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-                data-bs-toggle="modal"
-                data-bs-target="#modal3"
-                alt=""
+                src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+                data-bs-toggle='modal'
+                data-bs-target='#modal3'
+                alt=''
               />
               <img
-                src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-                data-bs-toggle="modal"
-                data-bs-target="#modal3"
-                alt=""
+                src='https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg'
+                data-bs-toggle='modal'
+                data-bs-target='#modal3'
+                alt=''
               />
             </div>
 
             <div
-              class="modal fade"
-              id="modal3"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
+              class='modal fade'
+              id='modal3'
+              tabindex='-1'
+              aria-labelledby='exampleModalLabel'
+              aria-hidden='true'
             >
-              <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-custom">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div className="document-tulieu__template">
-                      <img src="/img/template2.png" alt="" />
+              <div class='modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-custom'>
+                <div class='modal-content'>
+                  <div class='modal-body'>
+                    <div className='document-tulieu__template'>
+                      <img src='/img/template2.png' alt='' />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
->>>>>>> feature/signup
         </div>
       </div>
     </div>
