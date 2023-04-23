@@ -62,7 +62,7 @@ export default function Navbar() {
           <Link href='/'>Về Global Living</Link>
           <Link href='/'>Sản phẩm đầu tư</Link>
           <Link href='/tin-tuc'>Tin tức</Link>
-          <Link href='/'>Tài liệu bán hàng</Link>
+          <Link href='/tai-lieu-ban-hang'>Tài liệu bán hàng</Link>
           <Link href='/login'>Đăng nhập Đại lý/ CTV</Link>
         </div>
       </div>

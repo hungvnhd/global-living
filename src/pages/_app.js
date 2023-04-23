@@ -7,6 +7,8 @@ import "@/styles/BusinessPartners.css";
 import "@/styles/AboutUs.css";
 import "@/styles/Footer.css";
 import "@/styles/Newpage.css";
+import "@/styles/Documents.css";
+
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {

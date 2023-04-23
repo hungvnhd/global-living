@@ -38,7 +38,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-right: 38px;
+  margin-right: 65px;
 }
 
 .Navbar .logo > img {
@@ -112,7 +112,12 @@ ul > li {
   color: #000;
   left: 50%;
   transform: translate(-50%);
-  background-color: #fecd29;
+  background: linear-gradient(
+    102.66deg,
+    #ffdb63 31.25%,
+    #f4df9b 66.82%,
+    #fec450 96.93%
+  );
   border-radius: 5px;
   text-align: center;
 }
