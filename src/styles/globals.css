@@ -9,7 +9,6 @@
   --main-brown: #bb9352;
   --main-yellow: #efcd7f;
 
-<<<<<<< HEAD
   --primary-background: linear-gradient(
     54deg,
     #e0a23b 0%,
@@ -25,12 +24,6 @@
     #f4df9b 66.82%,
     #fec450 96.93%
   );
-=======
-  --primary-background: linear-gradient(54deg, #E0A23B 0%, #F4ED93 18.23%, #FCB045 51.16%, #F4ED93 82.29%, #E0A23B 99.99%, #F4ED93 100%);
-  --secondary-background: linear-gradient(102.66deg, #FFDB63 31.25%, #F4DF9B 66.82%, #FEC450 96.93%);
-  --bs-btn-bg: none !important;
---bs-btn-border-color: none !important;
->>>>>>> feature/signup
 }
 
 @font-face {
@@ -403,4 +396,3 @@ width: 20%;
     top: 1143px;
     left: 1100px;
   }
->>>>>>> feature/signup
