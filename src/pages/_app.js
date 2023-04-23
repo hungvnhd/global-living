@@ -7,14 +7,16 @@ import "@/styles/BusinessPartners.css";
 import "@/styles/AboutUs.css";
 import "@/styles/Footer.css";
 import "@/styles/RegisterSuccess.css";
+import "@/styles/Newpage.css";
+import "@/styles/Register.css";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
-	useEffect(() => {
-		require("bootstrap/dist/js/bootstrap.bundle.min.js");
-	}, []);
+  useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
 
-	return <Component {...pageProps} />;
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
