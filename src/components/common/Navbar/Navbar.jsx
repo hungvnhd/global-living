@@ -38,9 +38,9 @@ export default function Navbar() {
     >
       <div className='nav-row additional-info'>
         <div className='phone'>0931 626 909</div>
-        <div className='icon'>fb</div>
-        <div className='icon'>zl</div>
-        <div className='icon'>ytb</div>
+        <div className='icon'>Facebook</div>
+        <div className='icon'>Zalo</div>
+        <div className='icon'>Youtube</div>
       </div>
       <div
         className='Navbar-container'
@@ -62,7 +62,7 @@ export default function Navbar() {
           <Link href='/'>Về Global Living</Link>
           <Link href='/'>Sản phẩm đầu tư</Link>
           <Link href='/tin-tuc'>Tin tức</Link>
-          <Link href='/'>Tài liệu bán hàng</Link>
+          <Link href='/tai-lieu-ban-hang'>Tài liệu bán hàng</Link>
           <Link href='/login'>Đăng nhập Đại lý/ CTV</Link>
         </div>
       </div>
