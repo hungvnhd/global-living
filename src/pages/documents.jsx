@@ -2,11 +2,7 @@ import { Navbar } from "@/components/common";
 
 export default function documents() {
   return (
-    <div className='documentPage'>
-      <div>
-        <Navbar />
-        <strong>TÀI LIỆU BÁN HÀNG</strong>
-      </div>
+    <div>
       <div className='documents-container'>
         <div>
           <span style={{ color: "#FFCD29" }}>Tài liệu đã lưu về</span>

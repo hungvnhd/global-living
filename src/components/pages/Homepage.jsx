@@ -1,22 +1,22 @@
 import Link from "next/link";
 import {
-  AboutUs,
-  BusinessPartners,
-  Contact,
-  CoreProduct,
-  Footer,
-  Navbar,
+	AboutUs,
+	BusinessPartners,
+	Contact,
+	CoreProduct,
+	Footer,
+	Navbar,
 } from "../common";
 
 export default function HomePage() {
-  return (
-    <>
-      <Navbar></Navbar>
-      <header className='Header'>
-        <video autoPlay muted loop id='myVideo'>
-          <source src='/header-video.mp4' type='video/mp4' />
-        </video>
-        {/* <div className="nav-card">
+	return (
+		<>
+			<Navbar></Navbar>
+			<header className="Header">
+				<video autoPlay muted loop id="myVideo">
+					<source src="/header-video.mp4" type="video/mp4" />
+				</video>
+				{/* <div className="nav-card">
 					<h3>THE VILLA HOUSE</h3>
 					<article>
 						<ul>
@@ -37,16 +37,16 @@ export default function HomePage() {
 					</article>
 				</div> */}
 
-        <div className='view-detail'>
-          <p>ĐẦU TƯ BẤT ĐỘNG SẢN - NHẬN THẺ CƯ TRÚ HUNGARY</p>
-          <Link href='#'>{`Xem chi tiết chương trình >>`}</Link>
-        </div>
-      </header>
-      <CoreProduct />
-      <Contact />
-      <AboutUs />
-      <BusinessPartners />
-      <Footer></Footer>
-    </>
-  );
+				<div className="view-detail">
+					<p>ĐẦU TƯ BẤT ĐỘNG SẢN - NHẬN THẺ CƯ TRÚ HUNGARY</p>
+					<Link href="#">{`Xem chi tiết chương trình >>`}</Link>
+				</div>
+			</header>
+			<CoreProduct />
+			<Contact />
+			<AboutUs />
+			<BusinessPartners />
+			<Footer></Footer>
+		</>
+	);
 }
