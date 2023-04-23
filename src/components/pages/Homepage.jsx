@@ -42,7 +42,10 @@ export default function HomePage() {
 						ĐẦU TƯ BẤT ĐỘNG SẢN - NHẬN THẺ CƯ TRÚ HUNGARY
 					</strong>
 					<br />
-					<Link href="#">{`Xem chi tiết chương trình >>`}</Link>
+					<Link
+						href="https://info.globalliving-group.com/hungary?fbclid=IwAR2hyJCSClRp4e-rkqJR63DoTRQnDVBzXs0776Ead3lyjVmBK4RU8u19qWU"
+						target={"_blank"}
+					>{`Xem chi tiết chương trình >>`}</Link>
 				</div>
 			</header>
 			<CoreProduct />

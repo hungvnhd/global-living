@@ -112,7 +112,7 @@ const AboutUs = () => {
 					className="AboutUs__text"
 					style={{ opacity: isZoomVision ? 1 : 0 }}
 				>
-					<h3>TẦM NHÌN</h3>
+					<h3>Tầm nhìn</h3>
 					<p>
 						Global Living định hướng trở thành đơn vị tiên phong
 						trong lĩnh vực đầu tư và phát triển bất động sản cao
