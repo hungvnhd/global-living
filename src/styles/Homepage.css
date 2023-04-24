@@ -131,13 +131,14 @@ ul > li {
   margin: 0;
   font-family: "IM FELL Double Pica SC";
   font-size: 20px;
-  color: #00000070;
+  color: #000000bd;
+  font-weight: 600;
 }
 
 .view-detail a {
   text-decoration: none;
   font-family: "IM FELL Double Pica SC";
   font-size: 18px;
-  color: #14141470;
-  font-weight: 400;
+  color: #000000bd;
+  font-weight: 600;
 }
