@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 export default function Reister() {
   const options = [
     { value: "", text: "Đại lý" },
@@ -18,6 +18,9 @@ export default function Reister() {
   const [phone, setPhone] = useState("");
   const [area, setArea] = useState("");
   const [password, setPassword] = useState("");
+  useEffect(() => {
+    console.log(selected);
+  }, [selected]);
 
   const handleChangeOptions = (e) => {
     setSelected(e.target.value);
@@ -32,8 +35,6 @@ export default function Reister() {
     setPhone(e.target.value);
   };
   const handleChangeArea = (e) => {
-    e.preventDefault();
-
     if (
       selected === "AZGLOBAL" ||
       selected === "EURO HOLDINGS" ||
