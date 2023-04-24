@@ -30,7 +30,7 @@ const AboutUs = () => {
 				}}
 			>
 				<img src="/images/vision-bg-1.png" alt="icon" />
-				<div className="overlay" />
+				{isZoomLocate ? <></> : <div className="overlay" />}
 				<div className="AboutUs__logo" style={{ cursor: "pointer" }}>
 					{!isZoomLocate ? (
 						<>
@@ -92,6 +92,11 @@ const AboutUs = () => {
 					alt="icon"
 					className="AboutUs__vision-bg"
 				/>
+				{isZoomLocate || isZoomMission ? (
+					<div className="overlay" />
+				) : (
+					<></>
+				)}
 				<div className="AboutUs__logo" style={{ cursor: "pointer" }}>
 					{!isZoomVision ? (
 						<>
@@ -149,7 +154,7 @@ const AboutUs = () => {
 				}}
 			>
 				<img src="/images/vision-bg-3.png" alt="icon" />
-				<div className="overlay" />
+				{isZoomMission ? <></> : <div className="overlay" />}
 				<div className="AboutUs__logo" style={{ cursor: "pointer" }}>
 					{!isZoomMission ? (
 						<>
