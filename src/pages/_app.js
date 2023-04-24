@@ -10,6 +10,7 @@ import "@/styles/RegisterSuccess.css";
 import "@/styles/Newpage.css";
 import "@/styles/Register.css";
 import "@/styles/Login.css";
+import "@/styles/DetailNewsPage.css";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
