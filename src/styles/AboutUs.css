@@ -60,6 +60,8 @@
 	right: 20px;
 	opacity: 0;
 	width: 50%;
+	background-color: rgb(26, 25, 25);
+	padding: 20px;
 }
 
 /* .AboutUs__vision:hover .AboutUs__text {
@@ -77,8 +79,8 @@
 .AboutUs__text p {
 	color: #fff;
 	font-family: "Inter";
-	font-size: 16px;
-	line-height: 25px;
+	font-size: 20px;
+	line-height: 30px;
 }
 
 .AboutUs__mission {
