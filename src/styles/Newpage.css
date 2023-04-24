@@ -11,7 +11,7 @@
 .newsPage > div:first-child > p:last-child {
   font-family: "Inika";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 80px;
   line-height: 120px;
   text-align: center;
@@ -21,6 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* text-shadow: 2px 2px 2px #f4ed93; */
 }
 .latestNews {
   background-color: #000000;

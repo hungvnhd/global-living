@@ -6,9 +6,9 @@ import "@/styles/Contact.css";
 import "@/styles/BusinessPartners.css";
 import "@/styles/AboutUs.css";
 import "@/styles/Footer.css";
+import "@/styles/RegisterSuccess.css";
 import "@/styles/Newpage.css";
-import "@/styles/Documents.css";
-
+import "@/styles/Register.css";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {

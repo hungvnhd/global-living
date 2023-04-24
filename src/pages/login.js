@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Login from "../components/pages/Login";
-export default function Home() {
+export default function tinTuc() {
   return (
     <>
       <Head>

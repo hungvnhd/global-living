@@ -38,7 +38,8 @@ export default function HomePage() {
 				</div> */}
 
         <div className='view-detail'>
-          <p>ĐẦU TƯ BẤT ĐỘNG SẢN - NHẬN THẺ CƯ TRÚ HUNGARY</p>
+          <strong>ĐẦU TƯ BẤT ĐỘNG SẢN - NHẬN THẺ CƯ TRÚ HUNGARY</strong>
+          <br />
           <Link href='#'>{`Xem chi tiết chương trình >>`}</Link>
         </div>
       </header>

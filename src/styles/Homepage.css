@@ -21,6 +21,7 @@
   width: 100%;
   padding-top: 20px;
   padding-right: 20px;
+  font-family: "IM FELL Double Pica";
 }
 
 .Navbar .additional-info > * {
@@ -38,7 +39,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-right: 65px;
+  margin-right: 52px;
 }
 
 .Navbar .logo > img {
@@ -48,7 +49,7 @@
 .Navbar .main-nav {
   display: flex;
   justify-content: space-around;
-  font-size: 14px;
+  font-size: 20px;
   color: var(--main-yellow);
   max-width: 1280px;
   width: 100%;
@@ -57,6 +58,7 @@
 
 .Navbar .main-nav a {
   font-family: "IM FELL Double Pica";
+  font-size: 20px;
 }
 
 .Header {
@@ -108,8 +110,9 @@ ul > li {
 .view-detail {
   position: absolute;
   bottom: 20px;
-  padding: 10px 15px;
+  padding: 15px 20px;
   color: #000;
+  font-weight: 500;
   left: 50%;
   transform: translate(-50%);
   background: linear-gradient(
@@ -120,14 +123,21 @@ ul > li {
   );
   border-radius: 5px;
   text-align: center;
+  border: 1px solid #f4df9b;
 }
 
-.view-detail p {
+.view-detail strong {
   text-transform: uppercase;
   margin: 0;
+  font-family: "IM FELL Double Pica SC";
+  font-size: 20px;
+  color: #00000070;
 }
 
 .view-detail a {
   text-decoration: none;
-  color: #000;
+  font-family: "IM FELL Double Pica SC";
+  font-size: 18px;
+  color: #14141470;
+  font-weight: 400;
 }
