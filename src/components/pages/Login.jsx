@@ -33,6 +33,9 @@ export default function login() {
 
           const result = await response.json();
           alert(result.message);
+          if (result.message === "Đăng nhập thành công") {
+            window.location.href = "/";
+          }
         } catch (error) {
           console.error("Error:", error);
         }

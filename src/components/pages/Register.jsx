@@ -91,7 +91,7 @@ export default function Reister() {
           const result = await response.json();
           alert(result.message);
           if (result.message === "Đăng ký thành công") {
-            window.location.href = "/homepage";
+            window.location.href = "/";
           }
         } catch (error) {
           console.error("Error:", error);
