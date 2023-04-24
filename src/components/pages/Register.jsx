@@ -167,8 +167,8 @@ export default function Reister() {
 			</form>
 
 			<div className="navigate">
-				<p>Chưa có tài khoản?</p>
-				<Link href={"/register"}>{`Đăng ký ngay ->`}</Link>
+				<p>Đã có tài khoản?</p>
+				<Link href={"/login"}>{`Đăng nhập ngay ->`}</Link>
 			</div>
 		</div>
 	);
