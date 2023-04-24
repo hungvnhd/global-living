@@ -9,6 +9,7 @@ import "@/styles/Footer.css";
 import "@/styles/RegisterSuccess.css";
 import "@/styles/Newpage.css";
 import "@/styles/Register.css";
+import "@/styles/Login.css";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {

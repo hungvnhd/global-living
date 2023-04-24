@@ -101,17 +101,17 @@ export default function Reister() {
     }
   };
   return (
-    <div className="sign-up__container">
-      <div className="sign-up__logo">
-        <img src="/img/Mockup LOGO1 4.png" alt="logo" />
+    <div className='sign-up__container'>
+      <div className='sign-up__logo'>
+        <img src='/img/Mockup LOGO1 4.png' alt='logo' />
       </div>
-      <div className="sign-up__header">
+      <div className='sign-up__header'>
         <div>
           <p>BẤT ĐỘNG SẢN ĐỊNH CƯ QUỐC TẾ</p>
           <p>GIẢI PHÁP ĐẦU TƯ KHÔNG BIÊN GIỚI</p>
         </div>
       </div>
-      <div className="sign-up__title">
+      <div className='sign-up__title'>
         <p
           style={{
             color: "rgba(239, 205, 127, 1)",
@@ -122,9 +122,9 @@ export default function Reister() {
           Đăng ký CTV/Sale
         </p>
       </div>
-      <div className="sign-up__form-container">
+      <div className='sign-up__form-container'>
         <form
-          action=""
+          action=''
           style={{
             width: "50%",
             margin: "auto",
@@ -135,25 +135,25 @@ export default function Reister() {
         >
           <p>
             <input
-              type="text"
-              placeholder="Họ và tên"
-              className="sign-up__form-container-input"
+              type='text'
+              placeholder='Họ và tên'
+              className='sign-up__form-container-input'
               onChange={handleChangeName}
               value={name}
             />
           </p>
           <p>
             <input
-              type="email"
-              placeholder="Email"
+              type='email'
+              placeholder='Email'
               onChange={handleChangeEmail}
               value={email}
             />
           </p>
           <p>
             <input
-              type="text"
-              placeholder="Số điện thoại"
+              type='text'
+              placeholder='Số điện thoại'
               onChange={handleChangePhone}
               value={phone}
             />
@@ -163,7 +163,7 @@ export default function Reister() {
             <select
               value={selected}
               onChange={handleChangeOptions}
-              className="form-option"
+              className='form-option'
             >
               {options.map((e) => {
                 return (
@@ -176,25 +176,32 @@ export default function Reister() {
           </p>
           <p>
             <input
-              type="text"
-              placeholder="Khu vực"
+              type='text'
+              placeholder='Khu vực'
               onChange={handleChangeArea}
               value={area}
             />
           </p>
           <p>
             <input
-              type="password"
-              placeholder="Mật khẩu"
+              type='password'
+              placeholder='Mật khẩu'
               onChange={handleChangePassword}
               value={password}
             />
           </p>
-          <button className="form-button">Đăng ký</button>
+          <button className='form-button'>Đăng ký</button>
         </form>
       </div>
-      <div className="sign-up__footer">
-        <span style={{ color: "white", fontSize: "120%" }}>
+      <div className='sign-up__footer'>
+        <span
+          style={{
+            color: "white",
+            fontSize: "120%",
+            marginRight: "20px",
+            fontFamily: "IM FELL Double Pica",
+          }}
+        >
           Đã có tài khoản?
         </span>
         <div
@@ -202,6 +209,7 @@ export default function Reister() {
             color: "rgba(239, 205, 127, 1)",
             cursor: "pointer",
             fontSize: "120%",
+            fontFamily: "IM FELL Double Pica",
           }}
           onClick={() => {
             window.location.href = "/login";
