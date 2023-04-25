@@ -193,7 +193,7 @@ export default function Reister() {
           value={password}
         />
 
-        <input type='submit' value='Đăng ký' />
+        <input type='submit' value='Đăng ký' style={{ color: "black" }} />
       </form>
 
       <div className='navigate'>
