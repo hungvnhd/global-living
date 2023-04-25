@@ -9,6 +9,7 @@ import DocumentsSalesIndentifier from "./indentifier";
 import { useState } from "react";
 import { useMemo } from "react";
 import LatestDocuments from "./latest-documents";
+import DocumentsSalesSection from "./documents";
 
 export const DocumentsSalesContext = React.createContext({});
 
@@ -35,6 +36,7 @@ const DocumentsSales = () => {
 					<DocumentsSaved />
 					<DocumentsSalesCategories />
 					<DocumentsSalesCart />
+					<DocumentsSalesSection />
 					<DocumentsSalesShowInformation />
 					<DocumentsSalesMediaMaterial />
 					<DocumentsSalesIndentifier />

@@ -3,9 +3,9 @@ import { Col, Row } from "antd";
 import React, { useContext, useEffect, useState } from "react";
 import { DocumentsSalesContext } from "..";
 import DocumentsSalesItem from "../SalesItem";
-import CartItemModal from "./CartItemModal";
+import DocumentsItem from "./DocumentsItemModal";
 
-const DocumentsSalesCart = () => {
+const DocumentsSalesSection = () => {
 	const { projectName } = useContext(DocumentsSalesContext);
 	const [data, setData] = useState([]);
 	const [open, setOpen] = useState(false);
@@ -28,7 +28,7 @@ const DocumentsSalesCart = () => {
 
 	return (
 		<div className="DocumentsSales__saved">
-			<h2>Giỏ hàng</h2>
+			<h2>Tài liệu bán hàng</h2>
 
 			<div className="DocumentsSaved__list">
 				{data?.map((item, index) => {
@@ -38,36 +38,12 @@ const DocumentsSalesCart = () => {
 
 			<CommonModal open={open} onClose={handleCloseModal}>
 				<div className="custom-modal-inner">
-					<h2>Giỏ hàng | Căn A</h2>
-
-					<Row
-						gutter={12}
-						style={{ marginBottom: "20px" }}
-						className="DocumentsSaved__list-modal-detail"
-					>
-						<Col span={16}>
-							<div className="detail-image">
-								<img
-									src="/images/lau_dai_thanh_thang_ninh_binh_9.jpg"
-									alt="image"
-								/>
-								<i>Vị trí trung tâm Budapest: 1073 Budapest</i>
-							</div>
-						</Col>
-
-						<Col span={8}>
-							<p>Thông tin chung:</p>
-							<p>Diện tích: 45m vuông</p>
-							<p>Loại hình: Căn hộ Studio</p>
-							<p>01 phòng ngủ</p>
-						</Col>
-					</Row>
-
+					<h2>Tài liệu bán hàng | Flyer</h2>
 					<Row gutter={12}>
-						{[1, 2, 3]?.map((item, index) => {
+						{[1, 2]?.map((item, index) => {
 							return (
 								<Col span={12} style={{ marginBottom: "30px" }}>
-									<CartItemModal />
+									<DocumentsItem />
 								</Col>
 							);
 						})}
@@ -78,4 +54,4 @@ const DocumentsSalesCart = () => {
 	);
 };
 
-export default DocumentsSalesCart;
+export default DocumentsSalesSection;

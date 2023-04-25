@@ -1,11 +1,11 @@
 .CartItemModal {
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-start;
 	gap: 10px;
 }
 
-.CartItemModal img {
+.CartItemModal img,
+.MediaMaterialItemModal img {
 	width: 50%;
 }
 
@@ -24,4 +24,15 @@
 
 .custom-modal-inner h2 {
 	background: none;
+	overflow: hidden auto;
+}
+
+.DocumentsSaved__list-modal-detail p {
+	margin: 0;
+	font-size: 20px;
+	line-height: 25px;
+}
+
+.DocumentsSaved__list-modal-detail .detail-image img {
+	width: 100%;
 }
