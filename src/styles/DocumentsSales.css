@@ -1,4 +1,5 @@
 .DocumentsSales {
+	overflow: hidden;
 	background: #000;
 }
 
@@ -16,6 +17,7 @@
 
 .DocumentsSales__saved {
 	padding: 40px;
+	position: relative;
 }
 
 .DocumentsSales__saved h2 {
@@ -43,11 +45,45 @@
 	gap: 50px;
 }
 
+.DocumentsSaved__list-modal {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
 .DocumentsSaved__item {
 	width: 30%;
+	cursor: pointer;
 }
 
 .DocumentsSaved__item img {
 	width: 100%;
 	border-radius: 5px;
+}
+
+.DocumentsSales__saved-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	max-height: 90vh;
+	max-width: 90vw;
+	border-radius: 8px;
+	overflow: hidden auto;
+	background: #fff;
+	transition: all 0.4s ease-in;
+}
+
+.DocumentsSales__saved-modal-overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: #000;
+	opacity: 0.4;
+	left: 0;
+	z-index: 1;
+	transition: all 0.4s ease-in;
 }

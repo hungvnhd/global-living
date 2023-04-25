@@ -1,0 +1,27 @@
+.CartItemModal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.CartItemModal img {
+	width: 50%;
+}
+
+.CartItemModal h2 {
+	background: none;
+	color: black;
+	font-size: 18px;
+	line-height: 25px;
+	margin: 0;
+}
+
+.CartItemModal p {
+	margin: 0;
+	line-height: 25px;
+}
+
+.custom-modal-inner h2 {
+	background: none;
+}

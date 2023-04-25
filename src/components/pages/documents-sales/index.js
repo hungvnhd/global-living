@@ -8,6 +8,7 @@ import DocumentsSalesMediaMaterial from "./media-material";
 import DocumentsSalesIndentifier from "./indentifier";
 import { useState } from "react";
 import { useMemo } from "react";
+import LatestDocuments from "./latest-documents";
 
 export const DocumentsSalesContext = React.createContext({});
 
@@ -26,11 +27,9 @@ const DocumentsSales = () => {
 		};
 	}, [projectName, setProjectName, onChangeProjectName]);
 
-	console.log("jtadd", projectName);
-
 	return (
 		<DocumentsSalesContext.Provider value={contextValues}>
-			<div className="DocumentsSales">
+			<section className="DocumentsSales">
 				<DocumentsSalesHeader />
 				<div className="DocumentsSales__inner">
 					<DocumentsSaved />
@@ -39,8 +38,9 @@ const DocumentsSales = () => {
 					<DocumentsSalesShowInformation />
 					<DocumentsSalesMediaMaterial />
 					<DocumentsSalesIndentifier />
+					<LatestDocuments />
 				</div>
-			</div>
+			</section>
 		</DocumentsSalesContext.Provider>
 	);
 };
