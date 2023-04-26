@@ -3,7 +3,7 @@ import { Col, Row } from "antd";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import DocumentsSalesItem from "../SalesItem";
+import DocumentSavedItem from "../components/DocumentSavedItem";
 
 const documents = [
 	{
@@ -41,64 +41,23 @@ const LatestDocuments = () => {
 			</h2>
 
 			<Row wrap gutter={50}>
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
+				<Col span={6}>
+					<DocumentSavedItem
+						title={"Đầu tư & định cư Hungary"}
+						picturePath={"/images/documents-sales/cart-3.jpg"}
 					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Đầu tư & định cư Hungary |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
-							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
 				</Col>
-
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
+				<Col span={6}>
+					<DocumentSavedItem
+						title={"Đầu tư & định cư Hungary"}
+						picturePath={"/images/documents-sales/cart-1.jpg"}
 					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Sải cánh vươn xa |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
-							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
 				</Col>
-
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
+				<Col span={6}>
+					<DocumentSavedItem
+						title={"Branding Guidelines"}
+						picturePath={"/images/documents-sales/cart-2.jpg"}
 					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Branding Guidelines |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
-							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
 				</Col>
 			</Row>
 		</div>

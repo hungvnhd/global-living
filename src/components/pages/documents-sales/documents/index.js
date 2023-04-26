@@ -2,26 +2,47 @@ import CommonModal from "@/components/common/Modal";
 import { DownloadOutlined } from "@ant-design/icons";
 import { Col, Row } from "antd";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useContext, useEffect, useState } from "react";
-import { DocumentsSalesContext } from "..";
-import DocumentsSalesItem from "../SalesItem";
-import DocumentsItem from "./DocumentsItemModal";
+import React, { useState } from "react";
+import DocumentSavedItem from "../components/DocumentSavedItem";
+import DocumentSaveModalItem from "../components/DocumentSaveModalItem";
 
 const DocumentsSalesSection = () => {
-	const router = useRouter();
-	const { projectName } = useContext(DocumentsSalesContext);
-	const [data, setData] = useState([]);
 	const [openFlyer, setOpenFlyer] = useState(false);
 	const [openSalesKit, setOpenSalesKit] = useState(false);
-
-	useEffect(() => {
-		if (projectName === "hungary1") {
-			setData([1, 2, 3]);
-		} else {
-			setData([1, 2]);
-		}
-	}, [projectName]);
+	const data = [
+		{
+			key: "salesKit",
+			title: "Sales kit",
+			picturePath: "/images/documents-sales/document-sale-1.png",
+		},
+		{
+			key: "flyer",
+			title: "Flyer",
+			picturePath: "/images/documents-sales/document-sale-2.png",
+		},
+	];
+	const flyerData = [
+		{
+			key: "flyer1",
+			title: "Flyer ver 1",
+			picturePath: "/images/documents-sales/document-sale-1.png",
+			url: "https://drive.google.com/file/d/1H9VssdDfsw8MmoYhvBOkZIMscRMZQV_E/view?usp=sharing",
+		},
+		{
+			key: "flyer2",
+			title: "Flyer ver 2",
+			picturePath: "/images/documents-sales/document-sale-1.png",
+			url: "https://drive.google.com/file/d/1EyWM2fsfdPEa_cnGhAJgIV30jhQosPJi/view?usp=sharing",
+		},
+	];
+	const salesKitData = [
+		{
+			key: "saleskit1",
+			title: "Sales kit",
+			picturePath: "/images/documents-sales/document-sale-2.png",
+			url: "https://drive.google.com/file/d/1OH8eRGVp0EBFtgOLsPZ7bGH7U5GV3JJb/view?usp=sharing",
+		},
+	];
 
 	const handleOpenModal = (type) => {
 		if (type === "flyer") {
@@ -44,104 +65,34 @@ const DocumentsSalesSection = () => {
 			<h2>Tài liệu bán hàng</h2>
 
 			<Row wrap gutter={50}>
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
-						onClick={() => handleOpenModal("salesKit")}
-					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Sales kit |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
+				{data.map((item) => {
+					return (
+						<Col span={6} key={item.key}>
+							<DocumentSavedItem
+								title={item.title}
+								picturePath={item?.picturePath}
+								onClick={() => handleOpenModal(item.key)}
 							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
-				</Col>
-
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
-						onClick={() => handleOpenModal("flyer")}
-					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Flyer |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
-							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
-				</Col>
+						</Col>
+					);
+				})}
 			</Row>
 
 			<CommonModal open={openFlyer} onClose={handleCloseModalFlyer}>
 				<div className="custom-modal-inner">
 					<h2>Tài liệu bán hàng | Flyer</h2>
-					<Row gutter={30}>
-						<Col span={12} className="CartItemModal">
-							<Link
-								href={
-									"https://drive.google.com/file/d/1H9VssdDfsw8MmoYhvBOkZIMscRMZQV_E/view?usp=sharing"
-								}
-								target="_blank"
-							>
-								<img
-									src="/images/lau_dai_thanh_thang_ninh_binh_9.jpg"
-									alt="image"
-								/>
-							</Link>
-
-							<div className="CartItemModal__detail">
-								<h2>Flyer ver 1</h2>
-								<DownloadOutlined
-									style={{
-										fontSize: "30px",
-										cursor: "pointer",
-									}}
-								/>
-								<p>Chia sẻ qua:</p>
-								<p>Zalo | Messenger | Link</p>
-							</div>
-						</Col>
-
-						<Col span={12} className="CartItemModal">
-							<Link
-								href={
-									"https://drive.google.com/file/d/1EyWM2fsfdPEa_cnGhAJgIV30jhQosPJi/view?usp=sharing"
-								}
-								target="_blank"
-							>
-								<img
-									src="/images/lau_dai_thanh_thang_ninh_binh_9.jpg"
-									alt="image"
-								/>
-							</Link>
-
-							<div className="CartItemModal__detail">
-								<h2>Flyer ver 2</h2>
-								<DownloadOutlined
-									style={{
-										fontSize: "30px",
-										cursor: "pointer",
-									}}
-								/>
-								<p>Chia sẻ qua:</p>
-								<p>Zalo | Messenger | Link</p>
-							</div>
-						</Col>
+					<Row gutter={30} wrap>
+						{flyerData.map((item, index) => {
+							return (
+								<Col span={12} key={item.key}>
+									<DocumentSaveModalItem
+										title={item.title}
+										picturePath={item.picturePath}
+										onClick={() => window.open(item.url)}
+									/>
+								</Col>
+							);
+						})}
 					</Row>
 				</div>
 			</CommonModal>
@@ -150,31 +101,17 @@ const DocumentsSalesSection = () => {
 				<div className="custom-modal-inner">
 					<h2>Tài liệu bán hàng | Sales kit</h2>
 					<Row gutter={12}>
-						<Col span={12} className="CartItemModal">
-							<Link
-								href={
-									"https://drive.google.com/file/d/1OH8eRGVp0EBFtgOLsPZ7bGH7U5GV3JJb/view?usp=sharing"
-								}
-								target="_blank"
-							>
-								<img
-									src="/images/lau_dai_thanh_thang_ninh_binh_9.jpg"
-									alt="image"
-								/>
-							</Link>
-
-							<div className="CartItemModal__detail">
-								<h2>Flyer ver 1</h2>
-								<DownloadOutlined
-									style={{
-										fontSize: "30px",
-										cursor: "pointer",
-									}}
-								/>
-								<p>Chia sẻ qua:</p>
-								<p>Zalo | Messenger | Link</p>
-							</div>
-						</Col>
+						{salesKitData.map((item, index) => {
+							return (
+								<Col span={12} key={item.key}>
+									<DocumentSaveModalItem
+										title={item.title}
+										picturePath={item.picturePath}
+										onClick={() => window.open(item.url)}
+									/>
+								</Col>
+							);
+						})}
 					</Row>
 				</div>
 			</CommonModal>

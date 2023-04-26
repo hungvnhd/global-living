@@ -20,7 +20,7 @@
 
 .CartItemModal h2 {
 	background: none;
-	color: black;
+	color: #fff;
 	font-size: 18px;
 	line-height: 25px;
 	margin: 0;
@@ -29,6 +29,10 @@
 .CartItemModal p {
 	margin: 0;
 	line-height: 25px;
+}
+
+.CartItemModal__detail p {
+	font-size: 20px;
 }
 
 .custom-modal-inner h2 {

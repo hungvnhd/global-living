@@ -1,12 +1,12 @@
 .DocumentsSales {
 	overflow: hidden;
-	background: #000;
+	background: #1e1e1e;
 }
 
 .DocumentsSales__header {
 	max-height: 70vh;
 	height: 70vh;
-	background-image: url("/assits/51785.jpg");
+	background-image: url("/images/core-product/budapest-1.jpg");
 	background-size: cover;
 	text-align: center;
 }
@@ -37,7 +37,7 @@
 
 .DocumentsSales__saved h2 {
 	color: #ffcd29;
-	background: #000;
+	background: #1e1e1e;
 	display: flex;
 	align-items: center;
 	margin: 20px 0;

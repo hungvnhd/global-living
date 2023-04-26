@@ -1,24 +1,53 @@
 import CommonModal from "@/components/common/Modal";
 import { DownloadOutlined } from "@ant-design/icons";
 import { Col, Row } from "antd";
-import React, { useContext, useEffect, useState } from "react";
-import { DocumentsSalesContext } from "..";
-import ShowInfoItemModal from "./ShowInfoItemModal";
+import React, { useState } from "react";
+import Slider from "react-slick";
+import DocumentSavedItem from "../components/DocumentSavedItem";
 
 const DocumentsSalesShowInformation = () => {
-	const { projectName } = useContext(DocumentsSalesContext);
-	const [data, setData] = useState([]);
 	const [open, setOpen] = useState(false);
 	const [openPresentation, setOpenPresentation] = useState(false);
 	const [openProgress, setOpenProgress] = useState(false);
-
-	useEffect(() => {
-		if (projectName === "hungary1") {
-			setData([1, 2, 3]);
-		} else {
-			setData([1, 2]);
-		}
-	}, [projectName]);
+	const settings = {
+		arrows: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+	};
+	const data = [
+		{
+			key: "invest",
+			title: "Đầu tư & định cư Hungary",
+			picturePath: "/images/documents-sales/cart-1.jpg",
+		},
+		{
+			key: "qa",
+			title: "Q&A",
+			picturePath: "/images/documents-sales/cart-2.jpg",
+		},
+		{
+			key: "progress",
+			title: "Quy trình & thủ tục",
+			picturePath: "/images/documents-sales/cart-3.jpg",
+		},
+		{
+			key: "presentation",
+			title: "Bài thuyết trình",
+			picturePath: "/images/documents-sales/cart-4.jpg",
+		},
+		{
+			key: "moreAboutShow",
+			title: "Các thông tin tham khảo về chương trình",
+			picturePath: "/images/documents-sales/cart-5.jpg",
+		},
+		{
+			key: "check",
+			title: "Khảo sát Hungary",
+			picturePath: "/images/documents-sales/document-sale-1.png",
+		},
+	];
 
 	const handleOpenModal = (type) => {
 		switch (type) {
@@ -46,137 +75,22 @@ const DocumentsSalesShowInformation = () => {
 		<div className="DocumentsSales__saved">
 			<h2>Thông tin chương trình</h2>
 
-			<Row wrap gutter={50}>
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
-						onClick={() => handleOpenModal("")}
-					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Đầu tư & định cư Hungary |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
-							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
-				</Col>
-
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
-						onClick={() => handleOpenModal("")}
-					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Q&A |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
-							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
-				</Col>
-
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
-						onClick={() => handleOpenModal("progress")}
-					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Quy trình & thủ tục |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
-							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
-				</Col>
-
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
-						onClick={() => handleOpenModal("presentation")}
-					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Bài thuyết trình |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
-							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
-				</Col>
-
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
-						onClick={() => handleOpenModal("")}
-					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Các thông tin tham khảo về chương trình |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
-							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
-				</Col>
-
-				<Col span={6} className="DocumentsSaved__item">
-					<img
-						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
-						alt="image"
-						onClick={() => handleOpenModal("")}
-					/>
-
-					<div className="DocumentsSaved__item-content">
-						<p>
-							Khảo sát Hungary |{" "}
-							<DownloadOutlined
-								style={{
-									fontSize: "30px",
-									cursor: "pointer",
-								}}
-							/>
-						</p>
-						<p>Chia sẻ: Zalo | Messenger | Link</p>
-					</div>
-				</Col>
-			</Row>
+			<Slider {...settings}>
+				{data.map((item) => {
+					return (
+						<DocumentSavedItem
+							title={item.title}
+							picturePath={item.picturePath}
+							onClick={() => handleOpenModal(item.key)}
+							isSlide
+						/>
+					);
+				})}
+			</Slider>
 
 			<CommonModal open={openProgress} onClose={handleCloseModalProgress}>
 				<div className="custom-modal-inner">
-					<h2>Quy trình & thủ tục</h2>
+					<h2>Thông tin chương trình | Quy trình & thủ tục</h2>
 					<h2>Quy trình và tiến độ</h2>
 					<Row gutter={12}>
 						<Col span={12} style={{ marginBottom: "30px" }}>

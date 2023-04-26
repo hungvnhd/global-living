@@ -7,11 +7,12 @@ const MODAL_STYLES = {
 	left: "50%",
 	maxHeight: "90vh",
 	transform: "translate(-50%, -50%)",
-	backgroundColor: "#FFF",
+	backgroundColor: "#1e1e1e",
 	padding: "30px 50px",
 	zIndex: 1000,
 	borderRadius: "8px",
 	overflow: "hidden auto",
+	color: "#fff",
 };
 
 const OVERLAY_STYLES = {
