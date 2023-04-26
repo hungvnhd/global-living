@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { DocumentsSalesContext } from "..";
 import DocumentsSalesItem from "../SalesItem";
 import CartItemModal from "./CartItemModal";
+import { DownloadOutlined } from "@ant-design/icons";
 
 const DocumentsSalesCart = () => {
 	const { projectName } = useContext(DocumentsSalesContext);
@@ -30,11 +31,70 @@ const DocumentsSalesCart = () => {
 		<div className="DocumentsSales__saved">
 			<h2>Giỏ hàng</h2>
 
-			<div className="DocumentsSaved__list">
-				{data?.map((item, index) => {
-					return <DocumentsSalesItem onClick={handleOpenModal} />;
-				})}
-			</div>
+			<Row wrap gutter={50}>
+				<Col span={6} className="DocumentsSaved__item">
+					<img
+						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
+						alt="image"
+						onClick={handleOpenModal}
+					/>
+
+					<div className="DocumentsSaved__item-content">
+						<p>
+							Căn 1.1 |{" "}
+							<DownloadOutlined
+								style={{
+									fontSize: "30px",
+									cursor: "pointer",
+								}}
+							/>
+						</p>
+						<p>Chia sẻ: Zalo | Messenger | Link</p>
+					</div>
+				</Col>
+
+				<Col span={6} className="DocumentsSaved__item">
+					<img
+						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
+						alt="image"
+						onClick={handleOpenModal}
+					/>
+
+					<div className="DocumentsSaved__item-content">
+						<p>
+							Căn 1.2 |{" "}
+							<DownloadOutlined
+								style={{
+									fontSize: "30px",
+									cursor: "pointer",
+								}}
+							/>
+						</p>
+						<p>Chia sẻ: Zalo | Messenger | Link</p>
+					</div>
+				</Col>
+
+				<Col span={6} className="DocumentsSaved__item">
+					<img
+						src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg"
+						alt="image"
+						onClick={handleOpenModal}
+					/>
+
+					<div className="DocumentsSaved__item-content">
+						<p>
+							Căn 1.3 |{" "}
+							<DownloadOutlined
+								style={{
+									fontSize: "30px",
+									cursor: "pointer",
+								}}
+							/>
+						</p>
+						<p>Chia sẻ: Zalo | Messenger | Link</p>
+					</div>
+				</Col>
+			</Row>
 
 			<CommonModal open={open} onClose={handleCloseModal}>
 				<div className="custom-modal-inner">
